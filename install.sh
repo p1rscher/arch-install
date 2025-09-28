@@ -38,13 +38,14 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 mkinitcpio -P
-passwd
 bootctl install
 cat <<BOOT > /boot/loader/entries/arch-uefi.conf
 title	Arch Linux
 linux	/vmlinuz-linux
 initrd	/initramfs-linux.img
 options	root=UUID=$(blkid -s UUID -o value $ROOT_PART) rw lang=en init=/usr/lib/systemd/systemd locale=en_US.UTF-8
+BOOT
+EOF
 
 # --- Abschluss ---
 echo "[6] Unmount und Neustart"
