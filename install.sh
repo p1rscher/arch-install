@@ -8,7 +8,7 @@ read -p "Root-Partition (z. B. /dev/sda2): " ROOT_PART
 read -p "EFI-Partition (z. B. /dev/sda1): " EFI_PART
 read -p "Home-Partition (z. B. /dev/sda3): " HOME_PART
 read -p "Mountpunkt (Standard: /mnt): " MOUNTPOINT
-MOUNTPOINT=${MOUNTPOINT:-/mnt
+MOUNTPOINT=${MOUNTPOINT:-/mnt}
 
 # --- Mounten ---
 echo "[1] Mount root partition: $ROOT_PART"
