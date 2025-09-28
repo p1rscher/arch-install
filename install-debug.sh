@@ -47,7 +47,7 @@ options	root=UUID=$(blkid -s UUID -o value $ROOT_PART) rw lang=en init=/usr/lib/
 BOOT
 cat <<BOOT > /boot/loader/entries/arch-uefi-fallback.conf
 title	Arch Linux Fallback
-linux	/vmlinuz-linux-fallback
+linux	/vmlinuz-linux
 initrd	/initramfs-linux-fallback.img
 options	root=UUID=$(blkid -s UUID -o value $ROOT_PART) rw lang=en init=/usr/lib/systemd/systemd locale=en_US.UTF-8
 BOOT
