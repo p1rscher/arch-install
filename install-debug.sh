@@ -51,7 +51,7 @@ linux	/vmlinuz-linux-fallback
 initrd	/initramfs-linux-fallback.img
 options	root=UUID=$(blkid -s UUID -o value $ROOT_PART) rw lang=en init=/usr/lib/systemd/systemd locale=en_US.UTF-8
 BOOT
-passwd root
+passwd << root
 root
 EOF
 
