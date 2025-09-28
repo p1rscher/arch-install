@@ -22,7 +22,7 @@ mount "$HOME_PART" "$MOUNTPOINT/home"
 
 # --- Basisinstallation ---
 echo "[4]d Installiere Basis-System"
-pacstrap "$MOUNTPOINT" base base-devel linux linux-firmware
+pacstrap "$MOUNTPOINT" base base-devel linux linux-firmware dhcpcd nano iwd
 
 # --- fstab generieren ---
 echo "[5] Generiere fstab"
